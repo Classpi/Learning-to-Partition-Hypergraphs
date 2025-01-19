@@ -1,0 +1,22 @@
+name: partition
+channels:
+  - pytorch
+  - nvidia
+  - defaults
+  - conda-forge
+dependencies:
+  - python==3.10.16
+  - pip
+  - numpy==1.26.4
+  - pandas==2.2.3
+  - cudatoolkit==11.7
+  - pytorch==1.13.1
+  - torchvision==0.14.1
+  - torchaudio==0.13.1
+  - ipykernel
+  - pip:
+    - scikit-learn==1.5.2
+    - git+https://github.com/iMoonLab/DeepHypergraph.git
+
+    - --index-url https://pypi.org/simple/
+    - kahypar
