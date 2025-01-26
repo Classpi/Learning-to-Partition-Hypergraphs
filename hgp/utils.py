@@ -110,8 +110,8 @@ def from_pickle_to_adj(dataset: str, unique:bool) -> Any:
         a = pkl.load(f)
     vertex_indices, edge_indices  = a
     
-    num_hyperedges = edge_indices.max().item() + 1  # 超边数量（最大索引 + 1）
-    num_vertices = vertex_indices.max().item() + 1  # 顶点数量（最大索引 + 1）
+    num_hyperedges = edge_indices.max().item() + 1  
+    num_vertices = vertex_indices.max().item() + 1 
     
     H = torch.zeros((num_vertices, num_hyperedges), dtype=torch.int32)
     H[vertex_indices, edge_indices] = 1
